@@ -31,8 +31,8 @@ export default function Page(): JSX.Element {
   }, []);
 
   return (
-    <main className="flex flex-col items-center justify-between min-h-screen p-24 bg-red-500">
-      Hello 23455faf
+    <main className="flex flex-col items-center justify-between min-h-screen p-24 bg-red-200">
+      Hello Test
     </main>
   );
 }
