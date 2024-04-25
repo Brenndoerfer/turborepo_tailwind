@@ -12,12 +12,17 @@ const project = resolve(process.cwd(), "tsconfig.json");
  */
 
 module.exports = {
-  extends: [
-    "@vercel/style-guide/eslint/node",
-    "@vercel/style-guide/eslint/typescript",
-  ].map(require.resolve),
-  parserOptions: {
-    project,
+  //   extends: [
+  //     "@vercel/style-guide/eslint/node",
+  //     "@vercel/style-guide/eslint/typescript",
+  //   ].map(require.resolve),
+  extends: ["eslint:recommended", "prettier", "eslint-config-turbo"],
+  plugins: ["only-warn"],
+  //   parserOptions: {
+  //     project,
+  //   },
+  env: {
+    node: true,
   },
   globals: {
     React: true,
@@ -33,5 +38,5 @@ module.exports = {
       },
     },
   },
-  ignorePatterns: ["node_modules/", "dist/"],
+  ignorePatterns: ["node_modules/", "dist/", ".*.js"],
 };
